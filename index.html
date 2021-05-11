@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/script.js"></script>
+	</head>
+	<body>
+	<h1>Hello World!🌏<br>🤌</h1>
+
+	<input type="text" oninput="script()"id="input">
+	<div id="errors"></div>
+
+	<button>Beep Boop</button>
+<script>
+function script1() {
+var input = document.getElementById('input').value;
+	var patt = /abc/g;
+	var patt1 = /def/g;
+	if (input === 'pie') throw "Yum! 🥧";
+	if (patt.test(input) === true) throw "... are you in kindergarten?";
+	if (patt1.test(input) === true) throw input;
+	if (input === '🧴😷💩🤡') throw "🤡🤡🤡🤡🤡";
+	if (input === '') throw "🤡🤡🤡🤡🤡";
+}
+function script() {
+try {
+	var input = document.getElementById('input').value;
+	script1();
+}
+catch(err) {
+	document.getElementById('errors').innerHTML = err;
+}
+}
+
+</script>
+	
+	</body>
+</html>
